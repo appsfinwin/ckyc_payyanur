@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">CKYC Payyanur</string>
+    <string name="ckyc">CENTRAL KYC REGISTRY</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="customer_id">Customer ID</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="fathers_name">Father\'s Name</string>
+    <string name="mothers_name">Mother\'s Name</string>
+    <string name="dob">Date Of Birth</string>
+    <string name="phone">Phone</string>
+
+
+    <string name="customer_details">Customer Details</string>
+    <string name="customer_id_proof">Customer ID Proof</string>
+    <string name="customer_address_proof">Customer Address Proof</string>
+
+    <string name="any_docmnt_notify">Any document notified by the central government</string>
+    <string name="docmnt_type_code">Document Type code</string>
+    <string name="Simplfd_Measr_Acc">Simplified Measures Account - Document Type code</string>
+
+    <string name="max_allo">( Maximum allowable size is 50kb !! )\nClick \'X\' to clear image</string>
+
+</resources>
