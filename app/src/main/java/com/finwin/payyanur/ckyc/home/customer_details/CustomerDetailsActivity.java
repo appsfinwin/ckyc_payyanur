@@ -148,12 +148,18 @@ public class CustomerDetailsActivity extends Fragment {
                             editor.apply();
                             viewModel.isVerifyCustId.set(true);
                             viewModel.setCustomerDetails(customerDetailsAction.getGetCustomerDetailsResponse().getData().getCustomerData().get(0));
-                            String[] profileString = (customerDetailsAction.getGetCustomerDetailsResponse().getData().getCustomerData().get(0).getApplicantImage()).split("base64,");
-                            String profile64 = profileString[1];
-                            viewModel.profile64.set(customerDetailsAction.getGetCustomerDetailsResponse().getData().getCustomerData().get(0).getApplicantImage());
-                            setCustomerImages(profile64);
+                          if(customerDetailsAction.getGetCustomerDetailsResponse().getData().getCustomerData().get(0).getApplicantImage()!=null)
+                          {
+                              if(!customerDetailsAction.getGetCustomerDetailsResponse().getData().getCustomerData().get(0).getApplicantImage().equals("")) {
+                                  String[] profileString = (customerDetailsAction.getGetCustomerDetailsResponse().getData().getCustomerData().get(0).getApplicantImage()).split("base64,");
+                                  String profile64 = profileString[1];
+                                  viewModel.profile64.set(customerDetailsAction.getGetCustomerDetailsResponse().getData().getCustomerData().get(0).getApplicantImage());
+                                  setCustomerImages(profile64);
+                                  binding.tvProfileImageSize.setText("Image size= " + Services.getImageSize(profile64));
+                              }
+                          }
 
-                            binding.tvProfileImageSize.setText("Image size= "+Services.getImageSize(profile64));
+
 
                             ((MainActivity) getActivity()).enableAllTabs();
                         }

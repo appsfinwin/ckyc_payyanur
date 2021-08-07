@@ -790,14 +790,16 @@ public class CustomerDetailsViewmodel extends AndroidViewModel implements Observ
         }else if (fathersFirstName.get().equals("")) {
             toast(fatherOrSpouseName.get()+"'s first name cannot be empty", view.getContext());
         }else if (fathersLastName.get().equals("")) {
-            toast(fatherOrSpouseName.get()+"'s last name cannot be empty", view.getContext());
-        } else if (prefixMothersName.get().equals("")) {
-            toast("Please select mother's name prefix", view.getContext());
-        }else if (mothersFirstName.get().equals("")) {
-            toast("Mother's First  Name cannot be empty", view.getContext());
-        }else if (mothersLastName.get().equals("")) {
-            toast("Mother's last  name cannot be empty", view.getContext());
-        }else if (selectedAccountType.get().equals("")) {
+            toast(fatherOrSpouseName.get() + "'s last name cannot be empty", view.getContext());
+        }
+//        } else if (prefixMothersName.get().equals("")) {
+//            toast("Please select mother's name prefix", view.getContext());
+//        }else if (mothersFirstName.get().equals("")) {
+//            toast("Mother's First  Name cannot be empty", view.getContext());
+//        }else if (mothersLastName.get().equals("")) {
+//            toast("Mother's last  name cannot be empty", view.getContext());
+//        }
+        else if (selectedAccountType.get().equals("")) {
             toast("Please select an account type", view.getContext());
         }else if (dateOfBirth.get().equals("") || dateOfBirth.get().equals("Date of Birth")) {
             toast("Please select date of birth", view.getContext());
