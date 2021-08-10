@@ -424,10 +424,10 @@ public class CustomerAddressProofViewModel extends AndroidViewModel implements O
                     }
                 }}
             }
-           etAddressLineOne.set(addressProof.getAddressLine1());
-           etAddressLineTwo.set(addressProof.getAddressLine2());
-           etAddressLineThree.set(addressProof.getAddressLine3());
-           etCityOrTown.set(addressProof.getTownOrVillage());
+           etAddressLineOne.set(addressProof.getAddressLine1()==null ? "" : addressProof.getAddressLine1());
+           etAddressLineTwo.set(addressProof.getAddressLine2()==null ? "":addressProof.getAddressLine2());
+           etAddressLineThree.set(addressProof.getAddressLine3()==null ? "": addressProof.getAddressLine3());
+           etCityOrTown.set(addressProof.getTownOrVillage()==null ? "": addressProof.getTownOrVillage());
 
         }catch (Exception e)
         {

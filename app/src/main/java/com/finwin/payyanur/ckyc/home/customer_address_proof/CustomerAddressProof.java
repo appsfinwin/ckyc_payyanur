@@ -143,17 +143,24 @@ public class CustomerAddressProof extends Fragment {
 
 
                         try {
+                            String addressSide1_64 = "",addressSide2_64="";
                             if (customerAddressProofAction.getGetAddressProofResponse().getData().getAddressProof().get(0).getAddressProofImageSide1() != null ||
                                     customerAddressProofAction.getGetAddressProofResponse().getData().getAddressProof().get(0).getAddressProofImageSide1().equals("")) {
                                 String[] addressSide1 = (customerAddressProofAction.getGetAddressProofResponse().getData().getAddressProof().get(0).getAddressProofImageSide1()).split("base64,");
-                                String addressSide1_64 = addressSide1[1];
+                                 addressSide1_64 = addressSide1[1];
                                 binding.tvAddressProofSide1Size.setText("image size= "+ Services.getImageSize(addressSide1_64));
-                                String[] addressSide2 = (customerAddressProofAction.getGetAddressProofResponse().getData().getAddressProof().get(0).getAddressProofImageSide1()).split("base64,");
-                                String addressSide2_64 = addressSide2[1];
-                                binding.tvAddressProofSide2Size.setText("image size= "+ Services.getImageSize(addressSide2_64));
 
-                                setCustomerImages(addressSide1_64,addressSide2_64);
+
+
                             }
+
+                            if (customerAddressProofAction.getGetAddressProofResponse().getData().getAddressProof().get(0).getAddressProofImageSide2() != null ||
+                                    customerAddressProofAction.getGetAddressProofResponse().getData().getAddressProof().get(0).getAddressProofImageSide2().equals("")) {
+                                String[] addressSide2 = (customerAddressProofAction.getGetAddressProofResponse().getData().getAddressProof().get(0).getAddressProofImageSide1()).split("base64,");
+                                addressSide2_64 = addressSide2[1];
+                                binding.tvAddressProofSide2Size.setText("image size= "+ Services.getImageSize(addressSide2_64));
+                            }
+                            setCustomerImages(addressSide1_64,addressSide2_64);
                         } catch (Exception e) {
 
                         }

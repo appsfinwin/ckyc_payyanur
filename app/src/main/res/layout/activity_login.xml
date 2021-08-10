@@ -97,6 +97,10 @@
                         android:onClick="@{viewModel::clickLogin}"
                         android:text="Sign in"
                         android:textColor="@color/white" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="version 1.2"/>
 
                     <!--                    <TextView-->
                     <!--                        android:id="@+id/tv_register"-->

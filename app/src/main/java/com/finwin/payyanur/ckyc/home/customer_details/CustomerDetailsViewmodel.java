@@ -688,16 +688,16 @@ public class CustomerDetailsViewmodel extends AndroidViewModel implements Observ
         setApplicantNamePrefix(applicantIndex);
         setMothersNamePrefix(motherIndex);
         etPan.set(customerData.getPan());
-        applicantFirstName.set(customerData.getApplicantFirstName());
-        applicantMiddleName.set(customerData.getApplicantMiddleName());
-        applicantLastName.set(customerData.getApplicantLastName());
-        fathersFirstName.set(customerData.getFatherSpouseFirstName());
-        fathersMiddleName.set(customerData.getFatherSpouseMiddleName());
-        fathersLastName.set(customerData.getFatherSpouseLastName());
-        mothersFirstName.set(customerData.getMotherSFirstName());
-        mothersMiddleName.set(customerData.getMotherSMiddleName());
-        mothersLastName.set(customerData.getMotherSLastName());
-        dateOfBirth.set(customerData.getDateOfBirthDateOfIncorporation());
+        applicantFirstName.set(customerData.getApplicantFirstName()==null? "": (customerData.getApplicantFirstName()));
+        applicantMiddleName.set(customerData.getApplicantMiddleName()==null ? "" : customerData.getApplicantMiddleName());
+        applicantLastName.set(customerData.getApplicantLastName()==null? "" : customerData.getApplicantLastName());
+        fathersFirstName.set(customerData.getFatherSpouseFirstName()== null? "":customerData.getFatherSpouseFirstName());
+        fathersMiddleName.set(customerData.getFatherSpouseMiddleName()==null ? "":customerData.getFatherSpouseMiddleName());
+        fathersLastName.set(customerData.getFatherSpouseLastName()==null? "" : customerData.getFatherSpouseLastName());
+        mothersFirstName.set(customerData.getMotherSFirstName()==null ? "" : customerData.getMotherSFirstName());
+        mothersMiddleName.set(customerData.getMotherSMiddleName()==null? "": customerData.getMotherSMiddleName());
+        mothersLastName.set(customerData.getMotherSLastName() ==null ? "" : customerData.getMotherSLastName());
+        dateOfBirth.set(customerData.getDateOfBirthDateOfIncorporation()==null ? "" : customerData.getDateOfBirthDateOfIncorporation());
         custId.set(customerData.getCustID());
         if (customerData.getFlagIndicatingFatherOrSpouseName().equals("01"))
         {
